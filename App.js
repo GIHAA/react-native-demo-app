@@ -67,6 +67,24 @@ export default function App() {
           }
         </View>
 
+        <View style={styles.setPri}>
+          <TouchableOpacity>
+              <View style={styles.setRed}>
+                <Text style={styles.addText}>+</Text>
+              </View>
+          </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.setYellow}>
+                <Text style={styles.addText}>+</Text>
+              </View>
+            </TouchableOpacity>
+          <TouchableOpacity>
+              <View style={styles.setGreen}>
+                <Text style={styles.addText}>+</Text>
+              </View>
+          </TouchableOpacity>
+        </View>
+
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
           style={styles.writeTaskWrapper}
@@ -78,6 +96,7 @@ export default function App() {
               <Text style={styles.addText}>+</Text>
             </View>
           </TouchableOpacity>
+          
         </KeyboardAvoidingView>
 
       
@@ -87,6 +106,44 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  setRed:{
+    width: 60,
+    height: 60,
+    backgroundColor: '#FF0000',
+    borderRadius: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+    marginBottom: 5,
+  },
+  setYellow:{
+    width: 60,
+    height: 60,
+    backgroundColor: '#FFFF00',
+    borderRadius: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+    marginBottom: 5,
+  },
+  setGreen:{
+    width: 60,
+    height: 60,
+    backgroundColor: '#00FF00',
+    borderRadius: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+  },
+  setPri: {
+    flexDirection: 'column',
+    position: 'absolute',
+    bottom: 110,
+    right: 30,
+  },
   container: {
     flex: 1,
     backgroundColor: '#E6E6E6',
