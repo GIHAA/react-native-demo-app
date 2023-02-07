@@ -1,5 +1,3 @@
-# todo-app
-
 ### Technologies
 - React-native
 - expo
